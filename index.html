@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PicoTown | 몽글몽글한 미니 캐릭터 스튜디오</title>
+  <meta name="description" content="PicoTown은 작고 귀여운 3D 캐릭터로 인테리어 벽화, 캐릭터 간판, 래핑 등 다양한 공간을 특별하게 만드는 캐릭터 라이선싱 스튜디오입니다.">
+  <meta name="keywords" content="피코타운, PicoTown, 캐릭터 라이선싱, 인테리어 벽화, 캐릭터 간판, 인테리어 랩핑, 3D 캐릭터, 미니 캐릭터, 캐릭터 디자인, 공간 인테리어, 캐릭터 굿즈">
+  <meta name="author" content="PicoTown">
+  <meta property="og:title" content="PicoTown | 몽글몽글한 미니 캐릭터 스튜디오">
+  <meta property="og:description" content="작고 귀여운 3D 캐릭터로 공간을 특별하게 만드는 캐릭터 라이선싱 스튜디오">
+  <meta property="og:image" content="images/bg.jpg">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#fdfdff",
+            "primary": "#1a1c1c",
+            "secondary": "#5a5f68",
+            "pico-lavender": "#f3f0ff",
+            "pico-peach": "#FFD5C2",
+            "pico-yellow": "#FFE66D",
+            "pico-teal": "#4ECDC4"
+          },
+          borderRadius: {
+            "clay": "40px",
+            "clay-lg": "60px"
+          },
+          spacing: {
+            "margin-desktop": "64px",
+            "container-max": "1280px",
+            "section-gap": "140px"
+          },
+          fontFamily: {
+            "display": ["Hanken Grotesk"],
+            "body": ["Hanken Grotesk"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-surface text-primary font-body selection:bg-pico-lavender">
+
+  <!-- Global Navigation -->
+  <nav id="main-nav" class="fixed top-0 w-full z-50 bg-transparent transition-all duration-300">
+    <div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto">
+      <div class="text-3xl font-display font-extrabold tracking-tight text-white nav-logo">PicoTown<span class="text-pico-teal">.</span></div>
+      <div class="hidden md:flex gap-12 items-center">
+        <a class="text-sm uppercase tracking-widest font-bold text-white nav-link" href="#">Gallery</a>
+        <a class="text-sm uppercase tracking-widest font-bold text-white/80 hover:text-white transition-colors nav-link" href="#">Characters</a>
+        <a class="text-sm uppercase tracking-widest font-bold text-white/80 hover:text-white transition-colors nav-link" href="#">About</a>
+        <a class="text-sm uppercase tracking-widest font-bold text-white/80 hover:text-white transition-colors nav-link" href="#">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col items-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <picture>
+          <source media="(orientation: portrait) and (max-width: 767px)" srcset="images/images-bg-mobile.jpg">
+          <source media="(orientation: portrait)" srcset="images/images-bg-tablet.jpg">
+          <img alt="PicoTown Background" class="absolute inset-0 w-full h-full object-cover" src="images/bg.jpg">
+        </picture>
+        <div class="absolute top-[20%] left-[10%] w-64 h-64 bg-pico-peach/20 rounded-full blur-3xl floating-element"></div>
+        <div class="absolute bottom-[20%] right-[10%] w-96 h-96 bg-pico-teal/10 rounded-full blur-3xl floating-element" style="animation-delay: -2s;"></div>
+      </div>
+      <div class="absolute inset-x-0 top-[30%] md:top-[28%] lg:top-28 z-10 flex justify-center px-6">
+        <div class="reveal-on-scroll visible text-center max-w-xs md:max-w-sm lg:max-w-md">
+          <div class="mb-3 md:mb-5 inline-block px-4 md:px-6 py-1.5 md:py-2 rounded-full backdrop-blur-md w-fit">
+            <span class="text-white font-bold tracking-widest text-xl md:text-2xl lg:text-4xl uppercase">몽글몽글한</span>
+          </div>
+          <h1 class="font-display text-3xl md:text-5xl lg:text-6xl font-extrabold mb-3 md:mb-6 tracking-tighter text-white leading-[1.1] whitespace-nowrap">미니 캐릭터 스튜디오</h1>
+          <p class="text-sm md:text-lg lg:text-xl mx-auto mb-8 font-medium leading-relaxed text-white/90">피코타운만의 귀여운 캐릭터 디자인과<br>웹 콘텐츠를 만들어갑니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Character Narrative Section -->
+    <section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+      <div class="text-center mb-24 reveal-on-scroll visible">
+        <h2 class="font-display text-4xl font-extrabold mb-4" style="text-shadow: 1px 1px 0px #FFD5C2; letter-spacing: -0.02em;">우리의 소중한 친구들을 소개합니다</h2>
+        <p class="text-secondary font-medium">따뜻한 감성과 입체적인 볼륨감으로 태어난 피코타운 크루</p>
+      </div>
+
+      <div class="space-y-32">
+        <!-- 01 다람박 -->
+        <div class="flex flex-col md:flex-row items-center gap-20 reveal-on-scroll visible">
+          <div class="w-full md:w-1/2">
+            <div class="clay-card p-12 soft-gradient-peach relative overflow-hidden group">
+              <img alt="Darambak character" class="w-full h-auto object-contain relative z-10 scale-90" src="images/char_darambak.png">
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="mb-4 flex items-center gap-4">
+              <span class="text-pico-peach font-extrabold text-5xl opacity-30">01</span>
+              <h3 class="text-4xl font-extrabold">다람박</h3>
+            </div>
+            <p class="text-xl text-secondary leading-relaxed mb-8 font-medium">만물박사, 정수리에서 민트색 코로 이어지는 도토리 모양 무늬와 가슴의 하트 무늬가 특징인 수다쟁이 친구입니다.</p>
+            <div class="flex flex-col gap-4">
+              <div class="p-6 bg-white rounded-3xl border border-pico-peach/30 shadow-sm">
+                <p class="hand-drawn-font text-sm">"오늘은 어떤 재미있는 소식을 전해줄까? 궁금한 게 정말 많아!"</p>
+              </div>
+              <div class="flex gap-2">
+                <span class="px-6 py-2 bg-pico-peach/20 text-pico-peach font-bold rounded-full text-sm">#CURIOUS</span>
+                <span class="px-6 py-2 bg-pico-peach/20 text-pico-peach font-bold rounded-full text-sm">#SPIRITED</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 박거루 -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-20 reveal-on-scroll visible">
+          <div class="w-full md:w-1/2">
+            <div class="clay-card p-12 soft-gradient-yellow relative overflow-hidden group">
+              <img alt="Baggeoru character" class="w-full h-auto object-contain relative z-10 scale-90" src="images/char_baggeoru.png">
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="mb-4 flex items-center gap-4 justify-end">
+              <h3 class="text-4xl font-extrabold">박거루</h3>
+              <span class="text-pico-yellow font-extrabold text-5xl opacity-30">02</span>
+            </div>
+            <p class="text-xl text-secondary leading-relaxed mb-8 font-medium text-right">앞 주머니에 무엇이든 보관할 수 있는 든든한 친구입니다. 다정다감한 성격과 지치지 않는 체력을 가졌어요.</p>
+            <div class="flex flex-col gap-4 items-end">
+              <div class="p-6 bg-white rounded-3xl border border-pico-yellow/30 shadow-sm max-w-sm">
+                <p class="hand-drawn-font text-sm text-right">"내가 다 챙겨줄게! 주머니엔 아직 공간이 많다구."</p>
+              </div>
+              <div class="flex gap-2">
+                <span class="px-6 py-2 bg-pico-yellow/20 text-yellow-600 font-bold rounded-full text-sm">#VIBRANT</span>
+                <span class="px-6 py-2 bg-pico-yellow/20 text-yellow-600 font-bold rounded-full text-sm">#WISE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 박고래 -->
+        <div class="flex flex-col md:flex-row items-center gap-20 reveal-on-scroll visible">
+          <div class="w-full md:w-1/2">
+            <div class="clay-card p-12 soft-gradient-teal relative overflow-hidden group">
+              <img alt="Baggorae character" class="w-full h-auto object-contain relative z-10 scale-90" src="images/char_baggorae.png">
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="mb-4 flex items-center gap-4">
+              <span class="text-pico-teal font-extrabold text-5xl opacity-30">03</span>
+              <h3 class="text-4xl font-extrabold">박고래</h3>
+            </div>
+            <p class="text-xl text-secondary leading-relaxed mb-8 font-medium">민트색 몸과 하트 모양 꼬리가 매력적인 친구입니다. 물 속과 육지 어디서든 자유롭게 지낼 수 있어요.</p>
+            <div class="flex flex-col gap-4">
+              <div class="p-6 bg-white rounded-3xl border border-pico-teal/30 shadow-sm">
+                <p class="hand-drawn-font text-sm">"파란 파도를 타고 어디든 갈 수 있어. 함께 수영할래?"</p>
+              </div>
+              <div class="flex gap-2">
+                <span class="px-6 py-2 bg-pico-teal/20 text-pico-teal font-bold rounded-full text-sm">#SERENE</span>
+                <span class="px-6 py-2 bg-pico-teal/20 text-pico-teal font-bold rounded-full text-sm">#FLUID</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Archives Section -->
+    <section class="py-section-gap bg-white overflow-hidden">
+      <div class="max-w-container-max mx-auto px-margin-desktop mb-16 reveal-on-scroll visible">
+        <h2 class="font-display text-4xl font-extrabold text-center mb-2" style="text-shadow: 1px 1px 0px #4ECDC4;">Portfolio Archives</h2>
+        <p class="text-center text-secondary font-medium uppercase tracking-widest text-xs">A Premium Collection of 3D Creations</p>
+      </div>
+      <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="reveal-on-scroll aspect-square clay-card overflow-hidden group cursor-pointer visible">
+          <img class="w-full h-full group-hover:scale-110 transition-transform object-cover" src="images/portfolio_01.jpg">
+        </div>
+        <div class="reveal-on-scroll aspect-square clay-card overflow-hidden group cursor-pointer visible" style="transition-delay: 0.1s;">
+          <img class="w-full h-full group-hover:scale-110 transition-transform object-cover" src="images/portfolio_02.jpg">
+        </div>
+        <div class="reveal-on-scroll aspect-square clay-card overflow-hidden group cursor-pointer visible" style="transition-delay: 0.2s;">
+          <img class="w-full h-full group-hover:scale-110 transition-transform object-cover" src="images/portfolio_03.jpg">
+        </div>
+      </div>
+      <div class="mt-12 flex justify-center reveal-on-scroll visible">
+        <button class="px-12 py-4 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-300 uppercase tracking-widest text-sm">
+          View All Collection
+        </button>
+      </div>
+    </section>
+
+    <!-- Collaboration Section (Use Cases) -->
+    <section class="py-section-gap bg-surface" id="use-cases-section">
+      <div class="max-w-container-max mx-auto px-margin-desktop">
+        <div class="text-center mb-16 reveal-on-scroll visible">
+          <h2 class="font-display text-5xl font-extrabold mb-4 tracking-tight">PicoTown in Real Life</h2>
+          <p class="text-secondary font-medium">인테리어 벽화, 간판, 래핑 등 다양한 환경에 적용된 캐릭터 라이선싱 사례 소개합니다.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" id="use-case-grid">
+          <div class="reveal-on-scroll visible" data-card="mural">
+            <div class="use-case-card rounded-clay overflow-hidden aspect-[4/5] shadow-sm relative group cursor-pointer active" data-category="mural">
+              <img alt="Mural Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/usecase_mural.jpg">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                <h4 class="text-white text-xl font-extrabold mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">인테리어 벽화</h4>
+                <p class="text-white/80 text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">실내 분위기를 살리는 대형 포인트 벽화</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-on-scroll visible" style="transition-delay: 0.1s" data-card="signage">
+            <div class="use-case-card rounded-clay overflow-hidden aspect-[4/5] shadow-sm relative group cursor-pointer" data-category="signage">
+              <img alt="Signage Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/usecase_signage.jpg">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                <h4 class="text-white text-xl font-extrabold mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">캐릭터 간판</h4>
+                <p class="text-white/80 text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">브랜드 아이덴티티를 담은 입체적인 사이니지</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-on-scroll visible" style="transition-delay: 0.2s" data-card="wrapping">
+            <div class="use-case-card rounded-clay overflow-hidden aspect-[4/5] shadow-sm relative group cursor-pointer" data-category="wrapping">
+              <img alt="Wrapping Application" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="images/usecase_wrapping.jpg">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                <h4 class="text-white text-xl font-extrabold mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">인테리어 랩핑</h4>
+                <p class="text-white/80 text-sm font-medium translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">유휴 공간을 풍성하게 채우는 그래픽 솔루션</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Case Study Card -->
+        <div id="gallery-wrapper" class="hidden col-span-full mt-4">
+          <div class="bg-white rounded-clay p-4 md:p-12 shadow-sm border border-gray-100" id="detail-gallery">
+            <div class="flex justify-between items-center mb-4 md:mb-8">
+              <div class="flex flex-col">
+                <h3 class="text-lg md:text-2xl font-extrabold" id="detail-title"></h3>
+                <p class="text-secondary text-xs md:text-sm font-medium mt-1" id="detail-description"></p>
+              </div>
+              <span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors" onclick="resetGallery()">close</span>
+            </div>
+            <div class="carousel-container aspect-[4/3] md:aspect-video bg-gray-50">
+              <div class="carousel-track" id="carousel-track"></div>
+              <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-10">
+                <span class="material-symbols-outlined">chevron_left</span>
+              </button>
+              <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-10">
+                <span class="material-symbols-outlined">chevron_right</span>
+              </button>
+              <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10" id="carousel-dots"></div>
+            </div>
+            <div class="mt-4 text-center">
+              <span class="text-xs font-bold text-secondary tracking-widest uppercase" id="detail-pagination"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Goods Section -->
+    <section class="py-section-gap bg-white overflow-hidden">
+      <div class="max-w-container-max mx-auto px-margin-desktop text-center reveal-on-scroll visible">
+        <div class="mb-8 flex justify-center">
+          <div class="w-16 h-16 bg-pico-lavender/30 rounded-full flex items-center justify-center floating-element"></div>
+        </div>
+        <h2 class="font-display text-4xl md:text-5xl font-extrabold mb-4 tracking-tight" style="text-shadow: 1px 1px 0px #f3f0ff;">Vision &amp; Goods</h2>
+        <div class="max-w-2xl mx-auto">
+          <h3 class="text-2xl md:text-3xl font-bold mb-6 text-primary break-keep">작고 귀여운 캐릭터로<br class="md:hidden"> <span class="text-pico-teal">행복 플러스</span></h3>
+          <p class="text-lg md:text-xl text-secondary leading-relaxed font-medium">
+            피코타운은 일상을 더욱 특별하게 만드는 귀여운 동반자가 되고자 합니다.<br class="hidden md:block">
+            현재 캐릭터들의 매력을 온전히 담아낸 피규어, 문구류, 라이프스타일 굿즈 등<br class="hidden md:block">
+            다양한 제품 라인업을 정성스럽게 준비하고 있습니다.
+          </p>
+        </div>
+        <div class="mt-12 flex justify-center gap-4 opacity-30">
+          <div class="w-24 h-24 bg-gray-100 rounded-clay flex items-center justify-center">
+            <span class="material-symbols-outlined text-4xl">toys</span>
+          </div>
+          <div class="w-24 h-24 bg-gray-100 rounded-clay flex items-center justify-center">
+            <span class="material-symbols-outlined text-4xl">edit_note</span>
+          </div>
+          <div class="w-24 h-24 bg-gray-100 rounded-clay flex items-center justify-center">
+            <span class="material-symbols-outlined text-4xl">shopping_bag</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white pt-24 pb-12">
+    <div class="max-w-container-max mx-auto px-margin-desktop">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 pb-12 border-b border-gray-100">
+        <div class="text-3xl font-display font-extrabold tracking-tight">PicoTown<span class="text-pico-teal">.</span></div>
+        <div class="flex flex-wrap gap-8">
+          <a class="text-sm font-bold text-secondary hover:text-primary" href="#">Studio</a>
+          <a class="text-sm font-bold text-secondary hover:text-primary" href="#">Careers</a>
+          <a class="text-sm font-bold text-secondary hover:text-primary" href="#">Privacy Policy</a>
+          <a class="text-sm font-bold text-secondary hover:text-primary" href="#">Instagram</a>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center mt-12 gap-6 text-xs font-bold text-secondary tracking-widest uppercase">
+        <p>© 2026 PicoTown Studio. All Rights Reserved.</p>
+        <p>Made with love in Seoul</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
